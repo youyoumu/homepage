@@ -34,6 +34,11 @@ main {
     width: 30px;
     height: 30px;
     margin-left: 10px;
+    transition: transform .1s;
+}
+
+.icons>img:hover {
+    transform: scale(1.1);
 }
 
 .project-container {
@@ -54,10 +59,15 @@ main {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: transform .1s;
+}
+
+.project-card:hover {
+    transform: translate(0, -5px);
 }
 
 .project-description {
-    padding: 0 10px 0 10px;
+    padding: 0 20px 40px 20px;
 }
 
 .project-description>div {
@@ -74,6 +84,11 @@ main {
 .card-icons>img {
     width: 30px;
     height: 30px;
+    transition: transform .1s;
+}
+
+.card-icons>img:hover {
+    transform: scale(1.1);
 }
 
 .footer {
@@ -86,7 +101,6 @@ main {
     max-width: 300px;
     object-fit: cover;
     margin-left: 20px;
-    border-radius: 10px;
 }
 
 body {
@@ -137,7 +151,7 @@ body {
     }
 
     .project-container {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, minmax(0, 500px));
         gap: 20px;
         padding: 20px;
     }
@@ -145,6 +159,7 @@ body {
     .introduction {
         flex-direction: column;
         padding: 0;
+        margin-bottom: 40px;
     }
 
     .footer {
